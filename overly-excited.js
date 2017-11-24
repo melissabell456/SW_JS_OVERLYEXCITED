@@ -2,7 +2,7 @@
 
     // // // Create an array that contains the words in the sentence
 // var sentence = [];
-let sentence = ["hi", "my", "name", "is", "MelBell"];
+let sentence = ["hi", "my", "name", "is", "Mel", "Bell", "What", "is", "Your", "Name"];
     // // The addExcitement function should accept the array as the sole argument
     // function addExcitement (theWordArray) {
     //     /*
@@ -58,21 +58,23 @@ let sentence = ["hi", "my", "name", "is", "MelBell"];
 // !!!!!!!!!!!!!!!!!!!!THIRD PART OF EXERCISE!!!!!!!!!!!!!!!!!!!!!!!!
 
 function addExcitement() {
-    var fullSentence = "";
-    for (var i = 0; i < sentence.length; i++) {
-        var iterValue = i + 1;
-        var remainder = iterValue % 3;
-//         if (remainder === 0) {
-//             fullSentence = fullSentence + " " + sentence[i] + "!";
-//             console.log(fullSentence);
-//             }
-//         else {
-//             fullSentence = fullSentence + " " + sentence[i];
-//                 console.log(fullSentence);
-//             }
-//         }
-// };
-    // // Invoke the function and pass in the array
-    // addExcitement(sentence)
-
-addExcitement(sentence);
+        var fullSentence = "";
+        for (var i = 0; i < sentence.length; i++) {
+            var iterValue = i + 1;
+            var remainder = iterValue % 3;
+            if (remainder === 0) {
+                var exclamationMark = iterValue / 3; 
+                fullSentence = fullSentence + " " + sentence[i] + "!".repeat(exclamationMark);
+                console.log(fullSentence);
+                }
+            else {
+                fullSentence = fullSentence + " " + sentence[i];
+                    console.log(fullSentence);
+                }
+            }
+    };
+        // // Invoke the function and pass in the array
+        // addExcitement(sentence)
+    
+    addExcitement(sentence);
+    
